@@ -18,22 +18,30 @@
     </header>
 
     <main>
-
-        <p class="text-center mb-4" id="quote">Chi dice questa frase celebre?</p>
+        <h2 class="text-center mb-4">Chi dice questa frase celebre?</h2>
         <p class="text-center mb-4" id="quote">"Doh"</p>
+    
         <div id="options">
-            <div class="card">
-                <img src="assets\img\homer.png" alt="">
+            <div class="row">
+                <div class="card" onclick="checkAnswer(this, 'Homer')">
+                    <img src="assets\img\homer.png" alt="">
+                </div>
+                <div class="card" onclick="checkAnswer(this, 'Darth-Vader')">
+                    <img src="assets\img\darth-vader.png" alt="">
+                </div>
+                <div class="card" onclick="checkAnswer(this, 'Gandalf')">
+                    <img src="assets\img\gandalf.png" alt="">
+                </div>
+                <div class="card" onclick="checkAnswer(this, 'Superman')">
+                    <img src="assets\img\superman.png" alt="">
+                </div>
             </div>
-            <div class="card">
-                <img src="assets\img\darth-vader.png" alt="">
-            </div>
-            <div class="card">
-                <img src="assets\img\gandalf.png" alt="">
-            </div>
-            <div class="card">
-                <img src="assets\img\superman.png" alt="">
-            </div>
+        </div>
+        
+        <button id="nextButton" onclick="mostraDomandaCasuale()" class="btn btn-primary btn-lg text-center">Domanda successiva</button>
+    
+        <div id="risultato" class="text-center mt-4">
+            <p id="punteggioTotale"></p>
         </div>
     </main>
 
